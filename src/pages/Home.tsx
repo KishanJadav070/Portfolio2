@@ -1,50 +1,94 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  CodeBracketIcon, 
-  DevicePhoneMobileIcon, 
-  PaintBrushIcon, 
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  CodeBracketIcon,
+  DevicePhoneMobileIcon,
+  PaintBrushIcon,
   CpuChipIcon,
   CloudIcon,
-  MegaphoneIcon
-} from '@heroicons/react/24/outline';
-import Button from '../components/Button';
-import AnimatedCounter from '../components/AnimatedCounter';
-import corviLogo from '../assets/corvi-delta-logo-black.png';
+  MegaphoneIcon,
+} from "@heroicons/react/24/outline";
+import Button from "../components/Button";
+import AnimatedCounter from "../components/AnimatedCounter";
+
+// ✅ Make sure the filename matches EXACTLY (case-sensitive for Vercel)
+import corviLogo from "../assets/corvi-delta-logo-black.png";
 
 const Home: React.FC = () => {
   const services = [
-    { icon: CodeBracketIcon, title: 'Web Development', description: 'Modern web applications using React, Node.js, and cutting-edge technologies.' },
-    { icon: DevicePhoneMobileIcon, title: 'Mobile App Development', description: 'Native and cross-platform mobile applications for iOS and Android.' },
-    { icon: PaintBrushIcon, title: 'UI/UX Design', description: 'Beautiful, intuitive designs that enhance user experience and engagement.' },
-    { icon: CpuChipIcon, title: 'AI & Automation', description: 'Intelligent solutions that automate processes and drive efficiency.' },
-    { icon: CloudIcon, title: 'Cloud & DevOps', description: 'Scalable cloud infrastructure and streamlined deployment processes.' },
-    { icon: MegaphoneIcon, title: 'Digital Marketing', description: 'SEO-optimized strategies that boost your online presence and reach.' },
+    {
+      icon: CodeBracketIcon,
+      title: "Web Development",
+      description:
+        "Modern web applications using React, Node.js, and cutting-edge technologies.",
+    },
+    {
+      icon: DevicePhoneMobileIcon,
+      title: "Mobile App Development",
+      description:
+        "Native and cross-platform mobile applications for iOS and Android.",
+    },
+    {
+      icon: PaintBrushIcon,
+      title: "UI/UX Design",
+      description:
+        "Beautiful, intuitive designs that enhance user experience and engagement.",
+    },
+    {
+      icon: CpuChipIcon,
+      title: "AI & Automation",
+      description: "Intelligent solutions that automate processes and drive efficiency.",
+    },
+    {
+      icon: CloudIcon,
+      title: "Cloud & DevOps",
+      description:
+        "Scalable cloud infrastructure and streamlined deployment processes.",
+    },
+    {
+      icon: MegaphoneIcon,
+      title: "Digital Marketing",
+      description:
+        "SEO-optimized strategies that boost your online presence and reach.",
+    },
   ];
 
   const stats = [
-    { number: 0, suffix: '+', label: 'Years Experience' },
-    { number: 10, suffix: '+', label: 'Projects Completed' },
-    { number: 10, suffix: '+', label: 'Happy Clients' },
-    { number: 5, suffix: '+', label: 'Countries Served' },
+    { number: 0, suffix: "+", label: "Years Experience" },
+    { number: 10, suffix: "+", label: "Projects Completed" },
+    { number: 10, suffix: "+", label: "Happy Clients" },
+    { number: 5, suffix: "+", label: "Countries Served" },
   ];
 
   const aboutItems = [
-    { title: 'Our Vision', description: 'To be the leading technology partner that transforms businesses through innovation and excellence.', icon: '🎯' },
-    { title: 'Our Mission', description: 'Delivering cutting-edge solutions that empower our clients to achieve their goals and exceed expectations.', icon: '🚀' },
-    { title: 'Our Values', description: 'Innovation, Quality, Reliability, and Customer Satisfaction drive everything we do.', icon: '💎' },
+    {
+      title: "Our Vision",
+      description:
+        "To be the leading technology partner that transforms businesses through innovation and excellence.",
+      icon: "🎯",
+    },
+    {
+      title: "Our Mission",
+      description:
+        "Delivering cutting-edge solutions that empower our clients to achieve their goals and exceed expectations.",
+      icon: "🚀",
+    },
+    {
+      title: "Our Values",
+      description:
+        "Innovation, Quality, Reliability, and Customer Satisfaction drive everything we do.",
+      icon: "💎",
+    },
   ];
 
   return (
     <div className="pt-16">
-
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-900 dark:to-blue-900">
-        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="absolute inset-0 bg-grid-pattern opacity-5" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-
             {/* Left Text */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -53,17 +97,22 @@ const Home: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6">
-                <span className="text-blue-600 dark:text-blue-400">Tech</span> That{' '}
+                <span className="text-blue-600 dark:text-blue-400">Tech</span>{" "}
+                That{" "}
                 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                   Transforms
                 </span>
               </h1>
               <h2 className="text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 mb-8">
-                Solutions That <span className="text-blue-600 dark:text-blue-400 font-semibold">Empower</span>
+                Solutions That{" "}
+                <span className="text-blue-600 dark:text-blue-400 font-semibold">
+                  Empower
+                </span>
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-10 max-w-xl">
-                We create cutting-edge digital solutions that drive innovation, enhance user experiences, 
-                and deliver exceptional results for businesses across the globe.
+                We create cutting-edge digital solutions that drive innovation,
+                enhance user experiences, and deliver exceptional results for
+                businesses across the globe.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg">
@@ -111,7 +160,6 @@ const Home: React.FC = () => {
                 <span className="text-xl">🚀</span>
               </motion.div>
             </motion.div>
-
           </div>
         </div>
       </section>
@@ -132,7 +180,9 @@ const Home: React.FC = () => {
                 <div className="text-4xl lg:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2">
                   <AnimatedCounter end={stat.number} suffix={stat.suffix} />
                 </div>
-                <p className="text-gray-600 dark:text-gray-400 font-medium">{stat.label}</p>
+                <p className="text-gray-600 dark:text-gray-400 font-medium">
+                  {stat.label}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -158,8 +208,10 @@ const Home: React.FC = () => {
               transition={{ delay: 0.1 }}
               className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
             >
-              We are passionate technologists dedicated to solving complex problems with innovative solutions. 
-              Our expertise spans modern web development, mobile applications, AI automation, and digital transformation.
+              We are passionate technologists dedicated to solving complex
+              problems with innovative solutions. Our expertise spans modern web
+              development, mobile applications, AI automation, and digital
+              transformation.
             </motion.p>
           </div>
 
@@ -174,8 +226,12 @@ const Home: React.FC = () => {
                 className="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{item.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {item.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -201,7 +257,8 @@ const Home: React.FC = () => {
               transition={{ delay: 0.1 }}
               className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
             >
-              Comprehensive technology solutions designed to drive your business forward
+              Comprehensive technology solutions designed to drive your business
+              forward
             </motion.p>
           </div>
 
@@ -227,7 +284,9 @@ const Home: React.FC = () => {
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    {service.description}
+                  </p>
                 </motion.div>
               );
             })}
@@ -259,7 +318,8 @@ const Home: React.FC = () => {
             transition={{ delay: 0.1 }}
             className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto"
           >
-            Let's discuss how CORVI DELTA can help you achieve your goals with cutting-edge technology solutions.
+            Let's discuss how CORVI DELTA can help you achieve your goals with
+            cutting-edge technology solutions.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -271,13 +331,16 @@ const Home: React.FC = () => {
             <Button variant="secondary" size="lg">
               <Link to="/contact">Start Your Project</Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600">
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-blue-600"
+            >
               <Link to="/portfolio">View Our Work</Link>
             </Button>
           </motion.div>
         </div>
       </section>
-
     </div>
   );
 };
