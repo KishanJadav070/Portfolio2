@@ -4,8 +4,8 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-      "start": "node server.js",
-  "build": "echo \"Nothing to build\""
+    "start": "node server.js",
+    "build": "echo \"Nothing to build\""
   },
   "keywords": [],
   "author": "",
@@ -22,6 +22,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.17.1",
     "morgan": "^1.10.1",
+    "multer": "^2.0.2",
     "nodemailer": "^7.0.5"
   }
 }
