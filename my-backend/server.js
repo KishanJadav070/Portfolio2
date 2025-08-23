@@ -13,7 +13,6 @@ import contactRoutes from "./routes/contactRoutes.js";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
 
 // ----------------- Middleware -----------------
 app.use(express.json()); // Parse JSON request bodies
@@ -22,7 +21,7 @@ app.use(morgan("dev")); // HTTP request logger
 // CORS configuration
 const allowedOrigins = (process.env.ALLOWED_ORIGINS || "")
   .split(",")
-  .map(origin => origin.trim())
+  .map((origin) => origin.trim())
   .filter(Boolean);
 
 app.use(
@@ -41,7 +40,7 @@ app.use(
 // ----------------- API Routes -----------------
 app.use("/api/admin/auth", adminauthRoutes);
 app.use("/api/admin/careers", careerRoutes);
-app.use("/api/admin/contacts", contactRoutes); // ✅ contacts route
+app.use("/api/admin/contacts", contactRoutes);
 
 // ----------------- Health Check -----------------
 app.get("/health", (_req, res) => {
@@ -49,26 +48,25 @@ app.get("/health", (_req, res) => {
 });
 
 // ----------------- Error Handling -----------------
-// 404 handler
 app.use((_req, res) => {
   res.status(404).json({ message: "API route not found" });
 });
 
-// General error handler
 app.use((err, _req, res, _next) => {
   console.error("Server Error:", err.message);
   res.status(500).json({ message: "Internal server error" });
 });
 
-// ----------------- Start Server -----------------
+// ----------------- Export for Vercel -----------------
 const startServer = async () => {
   try {
     await connectDB(process.env.MONGO_URI);
-    app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
   } catch (err) {
     console.error("❌ Failed to connect to MongoDB:", err.message);
-    process.exit(1);
   }
 };
 
 startServer();
+
+// Export app as Vercel serverless function handler
+export default app;
