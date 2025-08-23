@@ -57,15 +57,22 @@ app.use((err, _req, res, _next) => {
   res.status(500).json({ message: "Internal server error" });
 });
 
-// ----------------- Export for Vercel -----------------
-const startServer = async () => {
-  try {
-    await connectDB(process.env.MONGO_URI);
-  } catch (err) {
-    console.error("❌ Failed to connect to MongoDB:", err.message);
+// ----------------- MongoDB Connection -----------------
+let dbConnected = false;
+
+const ensureDBConnection = async () => {
+  if (!dbConnected) {
+    try {
+      await connectDB(process.env.MONGO_URI);
+      dbConnected = true;
+    } catch (err) {
+      console.error("❌ Failed to connect to MongoDB:", err.message);
+    }
   }
 };
 
-startServer();
+// Connect once at cold start
+await ensureDBConnection();
 
+// ----------------- Export for Vercel -----------------
 export default app;
