@@ -13,7 +13,7 @@ import Button from "../components/Button";
 import AnimatedCounter from "../components/AnimatedCounter";
 
 // ✅ Make sure the filename matches EXACTLY (case-sensitive for Vercel)
-import corviLogo from "../assets/corvi-delta-logo-black.png";
+import corviLogo from "../assets/Corvi-Delta-Logo-Black.png";
 
 const Home: React.FC = () => {
   const services = [
