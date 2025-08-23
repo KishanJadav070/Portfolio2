@@ -37,15 +37,19 @@ app.use(
   })
 );
 
+// ----------------- Root + Health Check -----------------
+app.get("/", (_req, res) => {
+  res.send("🚀 Backend is running. Use /api/* endpoints.");
+});
+
+app.get("/health", (_req, res) => {
+  res.status(200).json({ status: "ok" });
+});
+
 // ----------------- API Routes -----------------
 app.use("/api/admin/auth", adminauthRoutes);
 app.use("/api/admin/careers", careerRoutes);
 app.use("/api/admin/contacts", contactRoutes);
-
-// ----------------- Health Check -----------------
-app.get("/health", (_req, res) => {
-  res.status(200).json({ status: "ok" });
-});
 
 // ----------------- Error Handling -----------------
 app.use((_req, res) => {
