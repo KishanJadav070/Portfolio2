@@ -181,6 +181,9 @@ const Careers: React.FC = () => {
     { icon: '🚀', title: 'Growth Opportunities', description: 'Clear career paths and internal promotions' },
   ];
 
+  const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -205,7 +208,7 @@ const Careers: React.FC = () => {
     }
   
     try {
-      const res = await fetch("http://localhost:5000/api/admin/careers/apply", {
+      const res = await fetch(`${API_BASE_URL}/api/admin/careers/apply`, {
         method: "POST",
         body: formDataToSend,
       });
