@@ -16,7 +16,7 @@ const Portfolio: React.FC = () => {
       description: 'A PHP-based recipe management app with built-in server support (no XAMPP required).',
       fullDescription:
         'A lightweight recipe management web app built in PHP with built-in server support. It allows seamless browsing, adding, and editing recipes with a modern UI. Designed to showcase CorviDelta’s ability to build scalable apps with optimized performance.',
-      technologies: ['PHP', 'MySQL', 'HTML', 'CSS'],
+      technologies: ['PHP', 'MySQL', 'HTML', 'CSS','javaScript'],
       image: 'https://media.istockphoto.com/id/486507818/photo/person-at-breakfast-looking-at-recipe-app-on-digital-tablet.webp?a=1&b=1&s=612x612&w=0&k=20&c=m27Cd53AipvCjkfQsvpQP9I2545gaqramVUBF0KZRF0=',
       client: 'Internal Project',
       testimonial: 'Showcases CorviDelta’s ability to build lightweight yet scalable applications with optimized performance.',
