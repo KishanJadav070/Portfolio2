@@ -79,19 +79,19 @@ const Contact: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+ 
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
   
     try {
-      const res = await fetch(`${API_BASE_URL}/api/admin/contacts`, {
+      const res = await fetch(`https://portfolio2-covv.vercel.app/api/admin/contacts`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+      
   
       const data = await res.json().catch(() => ({}));
   
