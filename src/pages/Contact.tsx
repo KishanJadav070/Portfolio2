@@ -5,8 +5,7 @@ import {
   PhoneIcon, 
   MapPinIcon, 
   ClockIcon,
-  ChatBubbleLeftRightIcon,
-  DocumentArrowDownIcon
+DocumentArrowDownIcon
 } from '@heroicons/react/24/outline';
 
 const Contact: React.FC = () => {
@@ -363,29 +362,7 @@ const Contact: React.FC = () => {
 
               {/* Additional Actions */}
               <div className="space-y-4">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800"
-                >
-                  <div className="flex items-center mb-4">
-                    <ChatBubbleLeftRightIcon className="w-6 h-6 text-blue-600 dark:text-blue-400 mr-3" />
-                    <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100">
-                      Live Chat Support
-                    </h3>
-                  </div>
-                  <p className="text-blue-800 dark:text-blue-200 mb-4">
-                    Need immediate assistance? Chat with our team in real-time.
-                  </p>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-                  >
-                    Start Live Chat
-                  </motion.button>
-                </motion.div>
+               
 
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}

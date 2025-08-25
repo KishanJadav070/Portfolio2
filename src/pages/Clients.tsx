@@ -7,69 +7,59 @@ const Clients: React.FC = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const navigate = useNavigate();
 
-  const clients = [
-    { name: 'TechCorp', logo: '🏢' },
-    { name: 'InnovateLabs', logo: '🔬' },
-    { name: 'DataFlow', logo: '📊' },
-    { name: 'CloudSys', logo: '☁️' },
-    { name: 'FinanceWise', logo: '💰' },
-    { name: 'HealthTech', logo: '🏥' },
-    { name: 'EduPlatform', logo: '📚' },
-    { name: 'RetailMax', logo: '🛒' },
-  ];
-
   const testimonials = [
     {
       id: 1,
-      name: 'Sarah Johnson',
-      role: 'CTO, TechCorp',
-      company: 'TechCorp',
+      name: 'Ravi Sharma',
+      role: 'CTO, NexaTech',
+      company: 'NexaTech',
       content: 'CORVI DELTA transformed our digital presence completely. Their expertise in modern web technologies and attention to detail resulted in a 150% increase in user engagement. The team was professional, responsive, and delivered ahead of schedule.',
       rating: 5,
-      image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200',
+      image: 'https://img.icons8.com/color/96/000000/company.png', 
       projectType: 'Web Development',
     },
     {
       id: 2,
-      name: 'Michael Chen',
-      role: 'Founder, InnovateLabs',
-      company: 'InnovateLabs',
+      name: 'Ananya Iyer',
+      role: 'Founder, AIWorks',
+      company: 'AIWorks',
       content: 'Working with CORVI DELTA on our AI-powered analytics platform was exceptional. They not only understood our complex requirements but also provided valuable insights that improved our original concept. The results exceeded all expectations.',
       rating: 5,
-      image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200',
+      image: 'https://img.icons8.com/color/96/000000/artificial-intelligence.png',
       projectType: 'AI & Machine Learning',
     },
     {
       id: 3,
-      name: 'Emily Rodriguez',
-      role: 'Product Manager, DataFlow',
-      company: 'DataFlow',
+      name: 'Karan Mehta',
+      role: 'Product Manager, FlowData',
+      company: 'FlowData',
       content: 'The mobile app CORVI DELTA developed for us has been a game-changer. User adoption rates are through the roof, and the app consistently receives 5-star reviews. Their UX expertise really shows in the final product.',
       rating: 5,
-      image: 'https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=200',
+      image: 'https://img.icons8.com/color/96/000000/mobile-app.png',
       projectType: 'Mobile Development',
     },
     {
       id: 4,
-      name: 'David Kumar',
-      role: 'VP of Technology, CloudSys',
-      company: 'CloudSys',
+      name: 'Priya Nair',
+      role: 'VP of Technology, CloudNova',
+      company: 'CloudNova',
       content: 'CORVI DELTA helped us migrate to the cloud seamlessly. Their expertise in DevOps and cloud architecture ensured zero downtime during the transition. Our infrastructure is now 40% more efficient and significantly more scalable.',
       rating: 5,
-      image: 'https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=200',
+      image: 'https://img.icons8.com/color/96/000000/cloud.png',
       projectType: 'Cloud & DevOps',
     },
     {
       id: 5,
-      name: 'Lisa Thompson',
-      role: 'Marketing Director, RetailMax',
-      company: 'RetailMax',
+      name: 'Arjun Reddy',
+      role: 'Marketing Director, ShopEase',
+      company: 'ShopEase',
       content: 'The e-commerce platform CORVI DELTA built for us has revolutionized our business. Sales have increased by 200% since launch, and customer satisfaction scores are at an all-time high. Exceptional work!',
       rating: 5,
-      image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=200',
+      image: 'https://img.icons8.com/color/96/000000/shopping-cart.png',
       projectType: 'E-commerce',
     },
   ];
+  
 
   const caseStudies = [
     {
@@ -184,31 +174,8 @@ const Clients: React.FC = () => {
             </motion.p>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center"
-          >
-            {clients.map((client, index) => (
-              <motion.div
-                key={client.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-                className="text-center group cursor-pointer"
-              >
-                <div className="w-16 h-16 mx-auto mb-3 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-2xl group-hover:bg-blue-100 dark:group-hover:bg-blue-900/30 transition-colors duration-300">
-                  {client.logo}
-                </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                  {client.name}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
+         
+        
         </div>
       </section>
 

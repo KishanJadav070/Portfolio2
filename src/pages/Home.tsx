@@ -55,9 +55,9 @@ const Home: React.FC = () => {
 
   const stats = [
     { number: 0, suffix: "+", label: "Years Experience" },
-    { number: 10, suffix: "+", label: "Projects Completed" },
-    { number: 10, suffix: "+", label: "Happy Clients" },
-    { number: 5, suffix: "+", label: "Countries Served" },
+    { number: 5, suffix: "+", label: "Projects Completed" },
+    { number: 5, suffix: "+", label: "Happy Clients" },
+    { number: 5, suffix: "+", label: "States Served" },
   ];
 
   const aboutItems = [
