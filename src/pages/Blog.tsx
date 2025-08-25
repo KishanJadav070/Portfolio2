@@ -355,7 +355,7 @@ const Blog: React.FC = () => {
                   : "bg-gray-900 hover:bg-gray-800"
               }`}
             >
-              {isSubscribed ? "Unsubscribe ✖" : "Subscribe"}
+              {isSubscribed ? "Unsubscribe " : "Subscribe"}
             </motion.button>
 
             <p className="text-blue-100 text-sm mt-4">
