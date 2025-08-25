@@ -1,13 +1,14 @@
+// api/index.js
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import morgan from "morgan";
-import connectDB from "./config/db.js";
+import connectDB from "../my-backend/config/db.js";
 
 // Routes
-import adminauthRoutes from "./routes/adminauthRoutes.js";
-import careerRoutes from "./routes/careerRoutes.js";
-import contactRoutes from "./routes/contactRoutes.js";
+import adminauthRoutes from "../my-backend/routes/adminauthRoutes.js";
+import careerRoutes from "../my-backend/routes/careerRoutes.js";
+import contactRoutes from "../my-backend/routes/contactRoutes.js";
 
 // Load environment variables
 dotenv.config();
@@ -39,7 +40,7 @@ app.use(
 
 // ----------------- Root + Health Check -----------------
 app.get("/", (_req, res) => {
-  res.send("🚀 Backend is running. Use /api/* endpoints.");
+  res.send("🚀 Backend is running on Vercel. Use /api/* endpoints.");
 });
 
 app.get("/health", (_req, res) => {
@@ -69,6 +70,7 @@ const ensureDBConnection = async () => {
     try {
       await connectDB(process.env.MONGO_URI);
       dbConnected = true;
+      console.log("✅ MongoDB connected");
     } catch (err) {
       console.error("❌ Failed to connect to MongoDB:", err.message);
     }
