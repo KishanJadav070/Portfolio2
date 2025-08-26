@@ -46,16 +46,16 @@ const Contact: React.FC = () => {
     {
       icon: EnvelopeIcon,
       title: 'Email Us',
-      content: 'contact@corvidelta.com',
+      content: 'corvideltasolutions@gmail.com',
       description: 'Send us an email anytime',
-      href: 'mailto:contact@corvidelta.com',
+      href: 'mailto:corvideltasolutions@gmail.com',
     },
     {
       icon: PhoneIcon,
       title: 'Call Us',
-      content: '+91 123456789',
+      content: 'curruntly Email availabe because change official Contacct num',
       description: 'Mon-Fri from 9am to 6pm PST',
-      href: 'tel:+91 123456789',
+      href: '-',
     },
     {
       icon: MapPinIcon,

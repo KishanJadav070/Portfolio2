@@ -54,7 +54,7 @@ const Home: React.FC = () => {
   ];
 
   const stats = [
-    { number: 0, suffix: "+", label: "Years Experience" },
+    { number: 1, suffix: "+", label: "Month/Years Experience" },
     { number: 5, suffix: "+", label: "Projects Completed" },
     { number: 5, suffix: "+", label: "Happy Clients" },
     { number: 5, suffix: "+", label: "States Served" },

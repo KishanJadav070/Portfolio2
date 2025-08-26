@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
 
+// ✅ Correct way: Import image from src/assets
+import FounderImage from "../assets/f.jpeg"; // adjust path if needed
+
 const About: React.FC = () => {
   const navigate = useNavigate();
 
@@ -12,8 +15,7 @@ const About: React.FC = () => {
       role: "CEO & Founder",
       bio: "Visionary leader with 6 months of experience in tech innovation and business strategy. Founded by Khushi Jani, an IT engineer and passionate problem-solver, CorviDelta began as a vision to bridge the gap between ideas and impact. What started as a single person’s dream has now evolved into a growing tech company, delivering smart and tailored solutions.",
       skills: ["Leadership", "Strategy", "Innovation"],
-      image:
-        "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: FounderImage, // ✅ use imported image
     },
   ];
 
@@ -115,7 +117,7 @@ const About: React.FC = () => {
                 <p>
                   <strong>Mid 2025 – First Big Wins:</strong> Secured initial
                   projects, networked in Ahmedabad, and created our digital
-                  signature certificate (DSC) with the tagline:{" "}
+                  signature certificate (DSC) with the tagline: {" "}
                   <i>“Tech that Transforms, Solutions that Empower.”</i>
                 </p>
                 <p>
@@ -245,7 +247,7 @@ const About: React.FC = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-80 object-cover object-center group-hover:scale-105 transition-transform duration-300 rounded-t-xl"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
                 </div>

@@ -16,22 +16,23 @@ router.post("/login", (req, res) => {
   const adminPass = process.env.ADMIN_PASS;
   const jwtSecret = process.env.JWT_SECRET;
 
-  // 🔹 3. Check server config
   if (!adminUser || !adminPass || !jwtSecret) {
     console.error("❌ Missing environment variables:", {
       ADMIN_USER: !!adminUser,
       ADMIN_PASS: !!adminPass,
       JWT_SECRET: !!jwtSecret,
     });
-    return res.status(500).json({ error: "Server misconfiguration: missing env variables" });
+    return res
+      .status(500)
+      .json({ error: "Server misconfiguration: missing env variables" });
   }
 
-  // 🔹 4. Check credentials
+  // 🔹 3. Check credentials
   if (username !== adminUser || password !== adminPass) {
     return res.status(401).json({ error: "Invalid credentials" });
   }
 
-  // 🔹 5. Generate token
+  // 🔹 4. Generate token
   try {
     const token = jwt.sign({ username }, jwtSecret, { expiresIn: "8h" });
     return res.status(200).json({ message: "Login successful", token });
