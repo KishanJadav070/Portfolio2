@@ -1,4 +1,4 @@
-// api/index.js
+
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
@@ -17,7 +17,7 @@ const app = express();
 
 // ----------------- Middleware -----------------
 app.use(express.json()); // Parse JSON request bodies
-app.use(morgan("dev")); // HTTP request logger
+app.use(morgan("dev")); // HTTP 
 
 // CORS configuration
 const allowedOrigins = (process.env.ALLOWED_ORIGINS || "")
