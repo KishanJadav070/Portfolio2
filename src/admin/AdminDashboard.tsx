@@ -266,7 +266,7 @@ function DataTable({ data, type, deleteItem }: { data: any[]; type: "contacts" |
   );
 }
 
-// ----------------- CareerCards Component -----------------
+
 function CareerCards({ data, copyEmail, onCardClick }: { data: Career[]; deleteItem: (id: string, type: "contacts" | "careers") => void; downloadResume?: (id: string, name: string) => void; copyEmail?: (email: string) => void; onCardClick: (career: Career) => void }) {
   if (!data || data.length === 0) return <p className="text-gray-500">No career applications found</p>;
 
