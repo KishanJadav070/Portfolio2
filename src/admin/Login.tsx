@@ -15,7 +15,7 @@ export default function Login() {
       // Make sure VITE_API_URL is defined in .env
       
 
-      const res = await fetch("http://localhost:5000/api/admin/auth/login", {
+      const res = await fetch("https://portfolio2-covv.vercel.app/api/admin/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
